@@ -1,0 +1,81 @@
+@import './colors';
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    background-color: $dark-blue;
+}
+.box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $dark-grayish-blue;
+    width:90vw;
+    border-radius: 10px;
+    &__header{
+        color: $neon-green;
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    &__text{
+        color: $light-cyan;
+        margin-top: 3rem;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    &__pattern{
+        margin-top:3rem;
+        margin-bottom: 5rem;
+    }
+    &__btn{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: -30px;
+        padding: 1.3em;
+        border-radius: 50%;
+        border: none;
+        background-color: $neon-green;
+        &:hover{
+            box-shadow: 0 0 60px 10px $neon-green;
+        }
+    }
+}
+@media(min-width:768px){
+    .box{
+        width: 70vw;
+        &__header{
+            font-size: 1.8rem;
+        }
+        &__text{
+            font-size: 3.6rem;
+        }
+    }
+}
+@media(min-width:1100px){
+    .box{
+        width: 33vw;
+        &__header{
+            font-size: 2rem;
+        }
+        &__text{
+            font-size: 4rem;
+        }
+    }
+}
